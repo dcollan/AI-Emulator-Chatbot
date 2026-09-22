@@ -29,7 +29,7 @@ if 'result' not in st.session_state:
 # Create input field first
 user_input = st.text_input("Your question:", key="input_field")
 
-# Place buttons below the input area
+# Place buttons below the input
 col1, col2 = st.columns([1, 1])
 ask_button = col1.button("Ask")
 clear_button = col2.button("Clear")
