@@ -15,7 +15,7 @@ if not (api_key := os.getenv("OPENAI_API_KEY")):
 
 # Setup LangChain components
 llm = ChatOpenAI(model="gpt-4o-mini", temperature=0, openai_api_key=api_key)
-# Initialize SQL agent with database toolkit
+# Initialize SQL agent with the database toolkit
 agent = create_sql_agent(llm=llm, toolkit=SQLDatabaseToolkit(db=get_langchain_db(), llm=llm), verbose=True)
 
 # Setup Streamlit UI
