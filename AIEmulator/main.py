@@ -7,7 +7,8 @@ from database import get_langchain_db
 import os
 
 # Initialize OpenAI and validate API key
-load_dotenv()
+load_dotenv("secure.env")
+print("API key found:", os.getenv("OPENAI_API_KEY") is not None)
 if not (api_key := os.getenv("OPENAI_API_KEY")):
     st.error("Please set OPENAI_API_KEY in .env")
     st.stop()
