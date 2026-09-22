@@ -19,8 +19,8 @@ llm = ChatOpenAI(model="gpt-4o-mini", temperature=0, openai_api_key=api_key)
 agent = create_sql_agent(llm=llm, toolkit=SQLDatabaseToolkit(db=get_langchain_db(), llm=llm), verbose=True)
 
 # Setup Streamlit UI
-st.title("💬 Company Information Chatbot")
-st.write("Ask questions about the company")
+st.title("💬 Ask the Chatbot!")
+st.write("Ask it any exciting question.")
 
 # Initialize session state for storing results
 if 'result' not in st.session_state:
